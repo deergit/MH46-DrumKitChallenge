@@ -25,21 +25,33 @@
 }
 
 @media all and (max-width: 1000px) {
+    body {
+        zoom: 150%;
+    }
+    
     #inputBarContainer {
         flex-flow: row wrap;
     }
     
     #inputBarContainer div {
+        height: 150px;
+        border: 2px solid black;
         flex: 1 1 25%;
     }
 }
 
 @media all and (max-width: 500px) {
+    body {
+        zoom: 200%;
+    }
+    
     #inputBarContainer {
         flex-flow: row wrap;
     }
     
     #inputBarContainer div {
+        height: 150px;
+        border: 2px solid black;
         flex: 1 1 33%;
     }
 }
