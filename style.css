@@ -2,6 +2,12 @@
     /* border: 1px solid red; */
 }
 
+:root {
+    height: 100vh;
+
+    overflow: hidden;
+}
+
 #inputBarContainer {
     list-style: none;
     
@@ -14,7 +20,8 @@
 #inputBarContainer div {
     height: 50px;
 
-    padding: 20px 25px 10px 25px;
+    padding: 20px 0 10px 0;
+    margin: 10px;
     
     text-align: center;
     user-select: none;
@@ -25,33 +32,43 @@
 }
 
 @media all and (max-width: 1000px) {
-    body {
-        zoom: 150%;
-    }
-    
     #inputBarContainer {
+        height: 100%;
         flex-flow: row wrap;
     }
     
     #inputBarContainer div {
-        height: 150px;
+        height: 33%;
         border: 2px solid black;
-        flex: 1 1 25%;
+        flex: 1 0 25%;
+    }
+
+    #drumKitContainer {
+        display: none;
+    }
+
+    #sequencerContainer {
+        display: none;
     }
 }
 
-@media all and (max-width: 500px) {
-    body {
-        zoom: 200%;
-    }
-    
+@media all and (max-width: 600px) {
     #inputBarContainer {
+        height: 100%;
         flex-flow: row wrap;
     }
     
     #inputBarContainer div {
-        height: 150px;
+        height: 20%;
         border: 2px solid black;
-        flex: 1 1 33%;
+        flex: 1 0 33%;
+    }
+
+    #drumKitContainer {
+        display: none;
+    }
+
+    #sequencerContainer {
+        display: none;
     }
 }
