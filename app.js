@@ -18,6 +18,9 @@ const hihatKey = document.getElementById("hihatKey");
 const openhatKey = document.getElementById("openhatKey");
 const rideKey = document.getElementById("rideKey");
 
+const allKeys = document.querySelectorAll(".inputKey");
+const allSounds = [boom, kick, tom, tink, clap, snare, hihat, openhat, ride];
+
 const polyPlay = (audio_uri, vol) => {
     let polyPlayer = new Audio(audio_uri);
     polyPlayer.volume = vol;
@@ -102,4 +105,14 @@ document.addEventListener("keydown", (event) => {
             }, 100);
             break;
     }
+});
+
+allKeys.forEach((key, index) => {
+    key.addEventListener("click", () => {
+        key.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+        polyPlay(allSounds[index], 0.75);
+        setTimeout(() => {
+            key.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
+        }, 100);
+    });
 });
