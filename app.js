@@ -83,10 +83,6 @@ document.addEventListener("keydown", (event) => {
 
 allKeys.forEach((key, index) => {
     key.addEventListener("click", () => {
-        key.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-        polyPlay(allSounds[index], 0.75);
-        setTimeout(() => {
-            key.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-        }, 100);
+        kitPlay(allSounds[index], key);
     });
 });

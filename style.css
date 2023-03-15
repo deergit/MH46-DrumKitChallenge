@@ -10,6 +10,12 @@
     background-color: #282828;
 }
 
+body {
+    display: flex;
+
+    flex-flow: column nowrap;
+}
+
 #inputBarContainer {
     list-style: none;
     
@@ -22,8 +28,8 @@
 #inputBarContainer div {
     /* height: 150px; */
 
-    padding: 20px 0 10px 0;
-    margin: 10px;
+    padding: 20px;
+    margin: 20px;
 
     border-radius: 25px;
     
@@ -32,7 +38,7 @@
 
     flex: 1 1 7.5%;
 
-    background-color: rgb(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 #inputBarContainer div h1 {
@@ -48,6 +54,16 @@
 
     margin: 0;
     margin-bottom: 10px;
+}
+
+#sequencerContainer {
+    height: 100px;
+
+    margin: 20px;
+    border-radius: 25px;
+    padding: 25px;
+    
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 @keyframes hitZoom {
