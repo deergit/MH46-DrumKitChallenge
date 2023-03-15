@@ -32,9 +32,11 @@ const polyPlay = (audio_uri, vol) => {
 
 const kitPlay = (audio_uri, button) => {
     button.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+    button.style.animation = "hitZoom 0.1s linear";
     polyPlay(audio_uri, 0.75);
     setTimeout(() => {
         button.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
+        button.style.removeProperty("animation");
     }, 100);
 }
 
