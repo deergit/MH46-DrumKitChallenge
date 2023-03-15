@@ -30,79 +30,51 @@ const polyPlay = (audio_uri, vol) => {
     }, 2500);
 }
 
+const kitPlay = (audio_uri, button) => {
+    button.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
+    polyPlay(audio_uri, 0.75);
+    setTimeout(() => {
+        button.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
+    }, 100);
+}
+
 document.addEventListener("keydown", (event) => {
     switch (event.key) {
         case "a":
         case "q":
-            boomKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(boom, 0.75);
-            setTimeout(() => {
-                boomKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(boom, boomKey);
             break;
         case "s":
         case "w":
-            kickKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(kick, 0.75);
-            setTimeout(() => {
-                kickKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(kick, kickKey);
             break;
         case "d":
         case "e":
-            tomKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(tom, 0.75);
-            setTimeout(() => {
-                tomKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(tom, tomKey);
             break;
         case "f":
         case "r":
-            tinkKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(tink, 0.75);
-            setTimeout(() => {
-                tinkKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(tink, tinkKey);
             break;
         case "g":
         case "t":
-            clapKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(clap, 0.75);
-            setTimeout(() => {
-                clapKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(clap, clapKey);
             break;
         case "h":
         case "y":
-            snareKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(snare, 0.75);
-            setTimeout(() => {
-                snareKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(snare, snareKey);
             break;
         case "j":
         case "u":
-            hihatKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(hihat, 0.75);
-            setTimeout(() => {
-                hihatKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(hihat, hihatKey);
             break;
         case "k":
         case "i":
-            openhatKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(openhat, 0.75);
-            setTimeout(() => {
-                openhatKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(openhat, openhatKey);
             break;
         case "l":
         case "o":
-            rideKey.style.backgroundColor = "rgba(255, 0, 0, 0.25)";
-            polyPlay(ride, 0.75);
-            setTimeout(() => {
-                rideKey.style.backgroundColor = "rgba(0, 0, 0, 0.25)";
-            }, 100);
+            kitPlay(ride, rideKey);
             break;
     }
 });
