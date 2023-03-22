@@ -86,3 +86,9 @@ allKeys.forEach((key, index) => {
         kitPlay(allSounds[index], key);
     });
 });
+
+window.onload = () => {
+    allSounds.forEach((index) => {
+        polyPlay(allSounds[index], 0);
+    });
+}
